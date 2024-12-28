@@ -1,0 +1,147 @@
+$body-color:#111315;
+$main-color:#1B1D1F;
+$heading-color:#6F757C;
+$price-color:#BEE3CC;
+$font-color:#FEF7EE;
+$tag-color:#F6C768;
+$sold-color:#ED735D;
+$font-family:"DM Sans";
+
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: $body-color;
+    background-image: url(/src/images/bg-cafe.jpg);
+    background-size: 100% 45vh;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    padding: 0;
+    margin:0;
+}
+main{
+    background-color: $main-color;
+    width:80%;
+    height:150vh;
+    margin:145px auto;
+    padding:1rem;
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+.intro-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: $font-family;
+    margin-block:1rem 1rem;
+    background-image: url(/src/images/vector.svg);
+    background-position-x: right;
+    background-repeat: no-repeat;
+}
+.main-heading{
+    font-size: 2rem;
+    color:$font-color;
+    padding-top: 1rem;
+    margin-bottom: 5px;
+}
+.intro-text{
+    color:$heading-color;
+    font-size: 1rem;
+    max-width: 450px;
+    line-height: 25px;
+    text-align:center;
+    word-spacing: 2px;
+    margin-bottom: 1rem;
+}
+.intro-buttons>button{
+    color:$font-color;
+    background-color: $main-color;
+    font-size: 0.875rem;
+    font-family: $font-family;
+    padding:10px;
+    margin:5px;
+    border:none;
+    border-radius: 7px;
+    cursor:pointer;
+}
+.intro-buttons>button:hover{
+    background-color: $heading-color;
+}
+.products-section{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+}
+.product-card{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:100%;
+    max-width: 250px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+}
+.popular{
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    padding: 2px;
+    margin:5px;
+    border-radius: 5px;
+    background-color: $tag-color;
+    font-size: 0.625rem;
+}
+.img-card>img{
+    width:250px;
+    height:120px;
+    border-radius: 10px;
+}
+.name-and-price{
+    color:$font-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0.2rem 0;
+    font-size: 1rem;
+}
+.name-and-price>p{
+    color:$body-color;
+    background-color: $price-color;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 5px;
+    border:none;
+    border-radius: 3px;
+}
+.rating{
+    color:$font-color;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    margin-top:0;
+}
+.rating>h4{
+    margin:0 2px;
+    padding:0 2px;
+}
+.rating>p{
+    color:$heading-color;
+    margin:0 2px;
+    padding:0 2px;
+    font-weight: bold;
+}
+.rating>p.sold{
+    color:$sold-color;
+    font-weight: bold;
+    font-size: 0.825rem;
+    position: absolute;
+    left:75%;
+    text-wrap: nowrap;
+}
