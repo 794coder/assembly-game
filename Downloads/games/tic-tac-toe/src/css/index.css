@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  text-align: center;
+  color: hsl(0, 100%, 50%);
+}
+
+.squares {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 350px;
+  height: 50vh;
+  gap: 0;
+}
+
+.square-values {
+  border: 1px solid hsl(0, 0%, 25%);
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=index.css.map */
